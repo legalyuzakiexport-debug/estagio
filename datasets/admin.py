@@ -1,8 +1,14 @@
 from django.contrib import admin
-from .models import Dataset
+from .models import Dataset, DatasetVersion, DatasetMetadata
+
+class MetadataInline(admin.TabularInline):
+    model = DatasetMetadata
+
+class VersionInline(admin.TabularInline):
+    model = DatasetVersion
 
 @admin.register(Dataset)
 class DatasetAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'created_at')
-    search_fields = ('title', 'category')
-    list_filter = ('created_at', 'category')
+    inlines = [MetadataInline, VersionInline]
+    list_display = ('title', 'owner', 'status', 'visibility')
+    list_filter = ('status', 'visibility', 'category')
