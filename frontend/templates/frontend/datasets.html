@@ -1,0 +1,38 @@
+{% extends "frontend/base.html" %}
+
+{% block title %}Datasets{% endblock %}
+{% block page_title %}Datasets{% endblock %}
+{% block nav_datasets %}bg-gray-100 font-medium text-gray-900{% endblock %}
+
+{% block navbar_actions %}
+    <a href="/datasets/create" class="text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700">
+        + Novo Dataset
+    </a>
+{% endblock %}
+
+{% block content %}
+
+<div class="bg-white rounded-lg border border-gray-200">
+    <div class="px-4 py-3 border-b border-gray-200">
+        <input type="text" placeholder="Pesquisar datasets..." class="w-full text-sm border border-gray-200 rounded px-3 py-1.5 focus:outline-none focus:border-blue-400">
+    </div>
+    <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-xs text-gray-500">
+            <tr>
+                <th class="px-4 py-2 text-left">Nome</th>
+                <th class="px-4 py-2 text-left">Categoria</th>
+                <th class="px-4 py-2 text-left">Visibilidade</th>
+                <th class="px-4 py-2 text-left">Estado</th>
+                <th class="px-4 py-2 text-left">Data</th>
+                <th class="px-4 py-2 text-left"></th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+            <tr>
+                <td colspan="6" class="px-4 py-6 text-center text-gray-400">Ainda não há datasets.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

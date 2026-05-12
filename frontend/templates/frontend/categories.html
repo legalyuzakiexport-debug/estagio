@@ -1,0 +1,30 @@
+{% extends "frontend/base.html" %}
+
+{% block title %}Categorias{% endblock %}
+{% block page_title %}Categorias{% endblock %}
+{% block nav_categories %}bg-gray-100 font-medium text-gray-900{% endblock %}
+
+{% block content %}
+
+<div class="bg-white rounded-lg border border-gray-200">
+    <div class="px-4 py-3 border-b border-gray-200">
+        <h2 class="text-sm font-semibold text-gray-700">Todas as categorias</h2>
+    </div>
+    <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-xs text-gray-500">
+            <tr>
+                <th class="px-4 py-2 text-left">Nome</th>
+                <th class="px-4 py-2 text-left">Descrição</th>
+                <th class="px-4 py-2 text-left">Datasets</th>
+                <th class="px-4 py-2 text-left">Criada em</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+            <tr>
+                <td colspan="4" class="px-4 py-6 text-center text-gray-400">Ainda não há categorias.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
