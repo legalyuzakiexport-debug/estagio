@@ -52,7 +52,6 @@ class Dataset(models.Model):
     def __str__(self):
         return self.name
 
-
 class DatasetVersion(models.Model):
     dataset     = models.ForeignKey(
         Dataset, on_delete=models.CASCADE, related_name="versions"
@@ -74,7 +73,6 @@ class DatasetVersion(models.Model):
 
     def __str__(self):
         return f"{self.dataset.name} — v{self.version}"
-
 
 class DatasetMetadata(models.Model):
     dataset     = models.OneToOneField(
