@@ -136,6 +136,9 @@ STATIC_URL = 'static/'
 
 # Authentication
 AUTH_USER_MODEL = 'accounts.CustomUser'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'login'
 
 # Django REST Framework
 REST_FRAMEWORK = {
