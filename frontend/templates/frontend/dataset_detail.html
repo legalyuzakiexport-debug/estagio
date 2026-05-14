@@ -1,7 +1,7 @@
 {% extends "frontend/base.html" %}
 
 {% block title %}Detalhe do Dataset{% endblock %}
-{% block page_title %}{{ dataset.title|default:"Dataset" }}{% endblock %}
+{% block page_title %}{{ dataset.name|default:"Dataset" }}{% endblock %}
 {% block nav_datasets %}bg-gray-100 font-medium text-gray-900{% endblock %}
 
 {% block navbar_actions %}
@@ -16,7 +16,7 @@
 <div class="bg-white rounded-lg border border-gray-200 p-5 mb-4">
     <div class="flex items-start justify-between">
         <div>
-            <h2 class="font-semibold text-gray-800 mb-1">{{ dataset.title|default:"Nome do Dataset" }}</h2>
+            <h2 class="font-semibold text-gray-800 mb-1">{{ dataset.name|default:"Nome do Dataset" }}</h2>
             <p class="text-sm text-gray-500">{{ dataset.description|default:"Sem descrição." }}</p>
         </div>
         <div class="flex gap-2">

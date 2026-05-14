@@ -84,6 +84,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+ 
 
 # Para usar PostgreSQL em produção, descomente e configure:
 # DATABASES = {
