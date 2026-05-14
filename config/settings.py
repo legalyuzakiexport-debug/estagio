@@ -85,17 +85,17 @@ DATABASES = {
     }
 }
 
-# Para usar PostgreSQL em produção, descomente e configure:
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'project', 
-#         'USER': 'postgres',                 
-#         'PASSWORD': '2007',  
-#         'HOST': 'localhost',                
-#         'PORT': '5432',                    
-#     }
-# }
+# Para usar PostgreSQL em produção, comente acima e descomente:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'project',
+        'USER': 'postgres',
+        'PASSWORD': '2007',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -161,3 +161,6 @@ SIMPLE_JWT = {
     'ALGORITHM': 'HS256',
     'SIGNING_KEY': SECRET_KEY,
 }
+
+# Create a database named 'project'
+CREATE_DATABASE = 'project'
