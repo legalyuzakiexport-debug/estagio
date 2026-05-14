@@ -17,6 +17,6 @@ datasets_router.register(r"versions", DatasetVersionViewSet, basename="dataset-v
 urlpatterns = [
     path("admin/",       admin.site.urls),
     path("api/auth/",    include("accounts.urls")),
-    path("api/",         include(router.urls)),
-    path("api/",         include(datasets_router.urls)),
+    path("api/",         include(datasets_router.urls)),  # Inclui tanto router quanto datasets_router
+    path("",             include("frontend.urls")),
 ]

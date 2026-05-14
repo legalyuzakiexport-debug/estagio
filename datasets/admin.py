@@ -10,5 +10,5 @@ class VersionInline(admin.TabularInline):
 @admin.register(Dataset)
 class DatasetAdmin(admin.ModelAdmin):
     inlines = [MetadataInline, VersionInline]
-    list_display = ('title', 'owner', 'status', 'visibility')
+    list_display = ('name', 'owner', 'category', 'status', 'created_at')
     list_filter = ('status', 'visibility', 'category')
